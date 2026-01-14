@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ITM — Cinematic Landing</title>
+  <meta name="description" content="Cinematische landing page voor Azure Static Web App." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg">
+    <div class="vignette"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <span>ITM</span>
+    </div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#shots">Shots</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="pill" href="#deploy">Deploy</a>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="deploy">
+      <div class="hero-left">
+        <p class="kicker">Azure Static Web App • CI/CD via GitHub Actions</p>
+        <h1>Een cinematic webpagina.<br/>Snel, strak, live.</h1>
+        <p class="lead">
+          Minimalistisch design met filmische gloed, grain en diepe contrasten.
+          Perfect om je deployment voor week 4 te demonstreren.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#features">Bekijk features</a>
+          <a class="btn ghost" href="https://azure.microsoft.com/" target="_blank" rel="noreferrer">Azure</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">Free</div>
+            <div class="stat-label">SKU</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">West Europe</div>
+            <div class="stat-label">Region</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Auto</div>
+            <div class="stat-label">CI/CD</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="poster">
+          <div class="poster-glow"></div>
+          <div class="poster-inner">
+            <div class="poster-top">
+              <span class="badge">LIVE</span>
+              <span class="timecode">00:04:12:18</span>
+            </div>
+            <div class="poster-title">STATIC<br/>WEB APP</div>
+            <div class="poster-sub">Deploy • Preview • Publish</div>
+            <div class="poster-bars">
+              <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Features</h2>
+      <p class="muted">Cinematische styling met simpele HTML/CSS — geen build nodig.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Filmische look</h3>
+          <p>Vignette, glow en grain voor dat “movie poster” gevoel.</p>
+          <div class="chip-row">
+            <span class="chip">Vignette</span><span class="chip">Grain</span><span class="chip">Glow</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Snelle deploy</h3>
+          <p>Push naar <code>main</code> ⇒ GitHub Action draait ⇒ site is live.</p>
+          <div class="chip-row">
+            <span class="chip">GitHub Actions</span><span class="chip">Azure</span><span class="chip">Static</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Werkt op mobiel, tablet en desktop met nette typografie.</p>
+          <div class="chip-row">
+            <span class="chip">Mobile</span><span class="chip">Desktop</span><span class="chip">A11y</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="shots">
+      <h2>Shots</h2>
+      <p class="muted">“Frames” als placeholders (geen afbeeldingen nodig).</p>
+
+      <div class="shots">
+        <div class="shot">
+          <div class="shot-title">FRAME 01</div>
+          <div class="shot-line"></div>
+          <div class="shot-meta">Cold open • Establishing</div>
+        </div>
+        <div class="shot">
+          <div class="shot-title">FRAME 02</div>
+          <div class="shot-line"></div>
+          <div class="shot-meta">Close-up • Detail</div>
+        </div>
+        <div class="shot">
+          <div class="shot-title">FRAME 03</div>
+          <div class="shot-line"></div>
+          <div class="shot-meta">Wide • Final reveal</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p class="muted">
+        Tip: wil je later uitbreiden? Voeg pagina’s toe (bijv. <code>about.html</code>) en link ze in de navbar.
+      </p>
+
+      <div class="callout">
+        <div>
+          <strong>CI/CD test:</strong> wijzig 1 regel tekst, commit & push, en check de Actions-run.
+        </div>
+        <div class="callout-right">
+          <span class="dot"></span>
+          <span>Ready to deploy</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> ITM — Azure Static Web App</span>
+      <span class="footer-sep">•</span>
+      <span class="muted">Made for week 4 opdracht 3</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
